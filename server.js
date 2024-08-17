@@ -19,9 +19,14 @@ const io = new Server(server, {
     }
 });
 
+
+
+
 app.use(cors({
     origin: CLIENT_ORIGIN,
+    methods : ["*"]
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/auth", authRoutes);
@@ -49,3 +54,5 @@ server.listen(PORT, (err) => {
     if (err) return console.error('Server Error:', err);
     console.log(`Server running on PORT: ${PORT}`);
 });
+
+
