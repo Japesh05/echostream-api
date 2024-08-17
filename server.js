@@ -27,6 +27,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/auth", authRoutes);
 app.use("/post", postRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Welcome to EchoStream API!');
+});
+
+
 io.on('connection', (socket) => {
     console.log(`User connected with ${socket.id}`);
 
