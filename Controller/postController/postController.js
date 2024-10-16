@@ -4,9 +4,9 @@ const query = require("../../queries");
 const cloudinary = require("cloudinary").v2;
 
 cloudinary.config({
-  cloud_name: "dufddpcxp",
-  api_key: "391797573693833",
-  api_secret: "tKM3OaXT60rMHAyc_b6CUudj28E",
+  cloud_name: "", 
+  api_key: "",
+  api_secret: "",
 });
 
 const upload = async (localPath, postid, id, username, res) => {
